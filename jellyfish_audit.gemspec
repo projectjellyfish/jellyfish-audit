@@ -5,13 +5,13 @@ require 'jellyfish_audit/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = 'jellyfish_audit'
+  s.name        = 'jellyfish-audit'
   s.version     = JellyfishAudit::VERSION
   s.authors     = ['mafernando']
   s.email       = ['fernando_michael@bah.com']
-  s.homepage    = 'TODO'
-  s.summary     = 'TODO: Summary of JellyfishAudit.'
-  s.description = 'TODO: Description of JellyfishAudit.'
+  s.homepage    = 'http://www.projectjellyfish.org/'
+  s.summary     = 'Jellyfish Audit'
+  s.description = 'Adds audit support to Project Jellyfish'
   s.license     = 'APACHE'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'LICENSE', 'Rakefile', 'README.md']
