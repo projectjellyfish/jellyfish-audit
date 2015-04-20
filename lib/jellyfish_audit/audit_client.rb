@@ -1,5 +1,5 @@
 module JellyfishAudit
-  class AuditClient  < ActionController::LogSubscriber
+  class AuditClient < ActionController::LogSubscriber
     def process_action(event)
       payload = event.payload
       Rails.logger.info('START RAW ACTION')
@@ -18,7 +18,6 @@ module JellyfishAudit
       Rails.logger.info('Path: ' + @path)
       Rails.logger.info('Params: ' + @params.to_s)
       Rails.logger.info('END RAW ACTION')
-
     end
   end
 end
