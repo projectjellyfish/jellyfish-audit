@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jellyfish_audit (0.0.1)
+    jellyfish-audit (0.0.1)
       rails (~> 4.2.1)
 
 GEM
@@ -148,6 +148,6 @@ PLATFORMS
 DEPENDENCIES
   capybara
   factory_girl_rails
-  jellyfish_audit!
+  jellyfish-audit!
   rspec-rails
   rubocop
