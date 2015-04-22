@@ -16,8 +16,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'LICENSE', 'Rakefile', 'README.md']
 
-  s.add_dependency 'rails', '~> 4.2.1'
-
+  s.add_dependency 'rails'
   s.add_dependency 'dotenv-rails'
 
   s.test_files = Dir['spec/**/*']
