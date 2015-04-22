@@ -12,11 +12,3 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-
-# Dev + Tests
-group :development, :test do
-  gem 'rubocop'
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'factory_girl_rails'
-end
