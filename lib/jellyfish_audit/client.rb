@@ -5,9 +5,16 @@ module JellyfishAudit
     def process_action(event)
       extract_payload(event)
       log_payload
+      write_to_db
     end
 
     private
+
+    def write_to_db
+      event_params = { controller: @controller, method: @method, action: @action, format: @format, path: @path, params: @params }
+      e = Event.new event_params
+      e.save
+    end
 
     def extract_payload(event)
       @payload = event.payload
