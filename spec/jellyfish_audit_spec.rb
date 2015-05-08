@@ -4,7 +4,6 @@ module JellyfishAudit
   RSpec.describe 'Jellyfish Audit Spec', type: :request do
     it 'logs an event on the welcome controller', type: :request do
       get '/'
-      binding.pry
       expect(Event.last.controller).to eq('Rails::WelcomeController')
       expect(Event.last.method).to eq('GET')
       expect(Event.last.action).to eq('index')
