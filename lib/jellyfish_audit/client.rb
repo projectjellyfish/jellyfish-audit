@@ -5,7 +5,9 @@ module JellyfishAudit
     def process_action(event)
       extract_payload(event)
       log_payload
-      write_to_db
+      prepare_content
+      write_to_file if ENV['AUDIT_TO_FILE'] == 'true'
+      write_to_db if ENV['AUDIT_TO_DB'] == 'true'
     end
 
     private
@@ -14,6 +16,15 @@ module JellyfishAudit
       event_params = { controller: @controller, method: @method, action: @action, format: @format, path: @path, params: @params }
       e = Event.new event_params
       e.save
+    end
+
+    def write_to_file
+      path = Rails.root.to_s + '/log/audit.txt'
+      Rails.logger.info('START LOGGING TO: ' + path)
+      File.open(path, 'a') do |f|
+        f.puts(@content)
+      end
+      Rails.logger.info('END LOGGING TO: ' + path)
     end
 
     def extract_payload(event)
