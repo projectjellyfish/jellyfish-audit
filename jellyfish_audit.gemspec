@@ -5,7 +5,7 @@ require "jellyfish_audit/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "jellyfish_audit"
+  s.name        = "jellyfish-audit"
   s.version     = JellyfishAudit::VERSION
   s.authors     = ["mafernando"]
   s.email       = ["fernando_michael@bah.com"]
