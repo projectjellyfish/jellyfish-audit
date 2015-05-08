@@ -1,20 +1,18 @@
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
+# Ignore spec database.
+spec/dummy/db
 
-# Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
+# Ignore log and tmp files.
+log
+tmp
+spec/dummy/log
+spec/dummy/tmp
 
-# Ignore application configuration
-/config/application.yml
 
-#Ignore RubyMine files
-/.idea
+# Ignore RubyMine files
+.idea
 
-#environment
-/.env
-
-#Ingore the license finder reports
-/doc/dependencies*
+# Ignore dotenv file
 .env
+
+# Ignore Gemfile lock
+Gemfile.lock
