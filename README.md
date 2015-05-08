@@ -34,7 +34,7 @@ Specify audit outputs in `.env`:
   AUDIT_TO_DB = true
 ```
 
-#### Outputs
+### Outputs
 
 If `AUDIT_TO_FILE` is `true` then API requests will be logged to `/log/audit.txt`: 
 ```
