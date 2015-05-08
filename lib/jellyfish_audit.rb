@@ -1,4 +1,4 @@
-require "jellyfish_audit/engine"
+require 'jellyfish_audit/engine'
 
 module JellyfishAudit
 end
